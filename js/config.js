@@ -3,7 +3,10 @@
    Parents: change values here; pages read them at load time.
    ============================================================ */
 window.FAMILY_EVENTS = {
-  rsvpEmail: "rsvp@example.com", // <-- CHANGE ME: real RSVP inbox
+  // RSVPs POST to Google Apps Script → Family Events sheet (tab Erin-10)
+  rsvpEndpoint: "https://script.google.com/macros/s/AKfycbwP43bO_yOqdt7JxNN6zkLs0iiaXP6_bTn5beueQbfEZ5baLNXMFcJD34cmMB3yelegzw/exec",
+  rsvpSheetUrl: "https://docs.google.com/spreadsheets/d/1-eUsuKFtIUPUZ_qp61BkogVzp8l8ENzQph9FJlSrde4/",
+  rsvpEmail: "rsvp@example.com", // optional backup contact (email is no longer the primary RSVP path)
   erin10: {
     celebrant: "Erin",
     age: 10,

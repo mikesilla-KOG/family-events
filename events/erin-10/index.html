@@ -137,7 +137,7 @@
         <div class="rsvp-panel">
           <h2>RSVP for Erin’s party</h2>
           <p class="lead" style="margin-inline:auto;">
-            Let us know if you can make it — we’ll open your email app with the details filled in.
+            Let us know if you can make it — your response goes straight to the family RSVP sheet.
           </p>
           <form id="rsvp-form" novalidate>
             <div>
@@ -168,11 +168,11 @@
               <label for="guest-note">Note (optional)</label>
               <textarea id="guest-note" name="note" rows="3" placeholder="Allergies, questions, excitement…"></textarea>
             </div>
-            <button class="btn btn-primary" type="submit" style="width:100%; border:none;">Send RSVP email ✉️</button>
+            <button id="rsvp-submit" class="btn btn-primary" type="submit" style="width:100%; border:none;">Submit RSVP</button>
+            <p id="rsvp-status" class="rsvp-status" role="status" aria-live="polite" hidden></p>
           </form>
           <p class="rsvp-hint">
-            RSVP inbox is set in <code>js/config.js</code>
-            (<span id="rsvp-email-display">rsvp@example.com</span> — placeholder until parents update it).
+            Responses are saved to the family RSVP Google Sheet (tab Erin-10).
           </p>
         </div>
       </div>
@@ -190,39 +190,70 @@
   <script>
     (function () {
       var cfg = window.FAMILY_EVENTS || {};
-      var email = cfg.rsvpEmail || "rsvp@example.com";
-      var display = document.getElementById("rsvp-email-display");
-      if (display) display.textContent = email;
-
+      var endpoint = cfg.rsvpEndpoint;
       var form = document.getElementById("rsvp-form");
+      var statusEl = document.getElementById("rsvp-status");
+      var submitBtn = document.getElementById("rsvp-submit");
       if (!form) return;
-      form.addEventListener("submit", function (e) {
+
+      function setStatus(kind, message) {
+        if (!statusEl) return;
+        statusEl.hidden = false;
+        statusEl.className = "rsvp-status rsvp-status--" + kind;
+        statusEl.textContent = message;
+      }
+
+      form.addEventListener("submit", async function (e) {
         e.preventDefault();
         var name = document.getElementById("guest-name").value.trim();
-        var count = document.getElementById("guest-count").value;
+        var guests = document.getElementById("guest-count").value;
         var rsvp = document.getElementById("guest-rsvp").value;
-        var note = document.getElementById("guest-note").value.trim();
-        if (!name || !count || !rsvp) {
-          alert("Please fill in your name, guest count, and RSVP choice.");
+        var notes = document.getElementById("guest-note").value.trim();
+
+        if (!name || !guests || !rsvp) {
+          setStatus("error", "Please fill in your name, guest count, and RSVP choice.");
           return;
         }
-        var subject = "RSVP: Erin's 10th Birthday — " + name;
-        var body = [
-          "Hi!",
-          "",
-          "RSVP for Erin's 10th birthday (Friday, Sept 25, 2026 · Pins & Pockets, Lake Elsinore):",
-          "",
-          "Name: " + name,
-          "Number attending: " + count,
-          "Response: " + rsvp,
-          note ? "Note: " + note : "",
-          "",
-          "Thanks!"
-        ].filter(Boolean).join("\n");
-        window.location.href =
-          "mailto:" + encodeURIComponent(email) +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
+        if (!endpoint) {
+          setStatus("error", "RSVP is not configured yet. Please try again later.");
+          return;
+        }
+
+        var payload = {
+          name: name,
+          guests: guests,
+          rsvp: rsvp,
+          notes: notes,
+          source: "erin-10-invite"
+        };
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Submitting…";
+        }
+        setStatus("pending", "Sending your RSVP…");
+
+        try {
+          await fetch(endpoint, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(payload)
+          });
+          // no-cors cannot read the response; a completed fetch is treated as success
+          setStatus("success", "Thanks! Your RSVP was submitted to the family sheet.");
+          form.reset();
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "RSVP submitted ✓";
+          }
+        } catch (err) {
+          setStatus("error", "Something went wrong sending your RSVP. Please try again.");
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Submit RSVP";
+          }
+        }
       });
     })();
   </script>

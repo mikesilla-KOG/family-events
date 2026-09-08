@@ -30,12 +30,22 @@ js/config.js
 
 Update:
 
-- `rsvpEmail` — replace `rsvp@example.com` with the real RSVP inbox
+- `rsvpEndpoint` — Google Apps Script web app URL (Erin invite form POSTs here)
+- `rsvpSheetUrl` — Family Events Google Sheet (parents view RSVPs here)
+- `rsvpEmail` — optional backup contact only (email is no longer the primary RSVP path)
 - `erin10.schedule` — placeholder times for the `/plan/` itinerary
 - `erin10.parentsNotes` — room booking, food package, what-to-bring notes
 - `erin10.dateLabel` / `venue` / etc. if details change
 
 Invite copy and imagery are in the HTML under `events/erin-10/`. Shared look-and-feel is in `css/styles.css`.
+
+## RSVPs (Google Sheet)
+
+Public RSVPs from `/events/erin-10/` POST JSON to the Apps Script endpoint in `js/config.js` (`rsvpEndpoint`). Rows land on the **Erin-10** tab of the Family Events spreadsheet:
+
+**https://docs.google.com/spreadsheets/d/1-eUsuKFtIUPUZ_qp61BkogVzp8l8ENzQph9FJlSrde4/**
+
+Columns: Timestamp, Name, Guests, RSVP, Notes, Source. Parents open that sheet to track who’s coming.
 
 ### Sample placeholder times (starting point)
 

@@ -464,6 +464,37 @@ section { padding: 3rem 0; }
   margin-top: 0.75rem;
 }
 
+.rsvp-status {
+  margin: 0.35rem 0 0;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.rsvp-status--pending {
+  background: var(--cream-dark);
+  color: var(--ink-muted);
+}
+
+.rsvp-status--success {
+  background: rgba(125, 222, 162, 0.35);
+  color: #1f6b40;
+  border: 2px solid var(--mint);
+}
+
+.rsvp-status--error {
+  background: rgba(255, 107, 107, 0.18);
+  color: var(--coral-deep);
+  border: 2px solid var(--coral);
+}
+
+.rsvp-panel button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 /* Timeline (plan page) */
 .timeline {
   position: relative;
