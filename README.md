@@ -1,4 +1,4 @@
-# Family Events
+# Erin’s Birthday (family-events)
 
 Static GitHub Pages site for family celebrations. Current featured event: **Erin’s 10th birthday**.
 
@@ -8,7 +8,7 @@ Static GitHub Pages site for family celebrations. Current featured event: **Erin
 
 | Path | Purpose |
 |------|---------|
-| `/` | Family events home — features Erin’s party |
+| `/` | Home — Erin’s birthday invite hub |
 | `/events/erin-10/` | Public birthday invite + RSVP |
 | `/plan/` | **Parents-only itinerary** (not in main nav) |
 
