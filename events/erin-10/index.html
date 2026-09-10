@@ -7,8 +7,8 @@
   <meta name="description" content="Join Erin’s 10th birthday party on Friday, September 25, 2026 at Pins & Pockets, Lake Elsinore — bowling, arcade, cake & friends!" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../css/styles.css?v=arg2" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css?v=invite1" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
 </head>
 <body>
@@ -26,27 +26,46 @@
   </header>
 
   <main>
-    <section class="hero" style="padding-bottom: 1rem;">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="wrap">
-        <div class="invite-banner">
-          <img
-            src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&amp;fit=crop&amp;w=1400&amp;q=80"
-            alt="Soccer stadium lights and pitch ready for kickoff"
-            width="1400"
-            height="700"
-            loading="eager"
-          />
-          <div class="invite-banner-overlay">
-            <p class="eyebrow" style="background: rgba(255,255,255,0.95);">
-              <span class="jersey-badge" aria-hidden="true" style="min-width:2rem;height:2rem;font-size:1rem;margin-right:0.35rem;">10</span>
-              Double digits!
-            </p>
-            <h1>You’re invited to Erin’s 10th birthday!</h1>
-            <p>Friday, September 25, 2026 · Pins &amp; Pockets, Lake Elsinore · #10 sky-blue party vibes</p>
+    <section class="arch-shell">
+      <span class="soccer-ball sb1" aria-hidden="true"></span>
+      <span class="soccer-ball sb2" aria-hidden="true"></span>
+      <span class="soccer-ball sb3" aria-hidden="true"></span>
+      <span class="soccer-ball sb4" aria-hidden="true"></span>
+      <span class="soccer-ball sb5" aria-hidden="true"></span>
+      <span class="confetti c1" aria-hidden="true"></span>
+      <span class="confetti c2" aria-hidden="true"></span>
+      <span class="confetti c3" aria-hidden="true"></span>
+      <span class="confetti c4" aria-hidden="true"></span>
+
+      <div class="arch-card">
+        <div class="arch-stars" aria-hidden="true">
+          <span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="shield" aria-label="Age 10">
+          <span class="shield-num">10</span>
+        </div>
+        <p class="invite-kicker">You’re Invited</p>
+        <span class="invite-script">Birthday</span>
+        <h1 class="invite-name">Erin</h1>
+        <div class="invite-meta">
+          <div>
+            <h3>When</h3>
+            <p>Friday<br />September 25, 2026</p>
+          </div>
+          <div class="invite-meta-divider" aria-hidden="true"></div>
+          <div>
+            <h3>Where</h3>
+            <p>Pins &amp; Pockets<br />Lake Elsinore, CA</p>
           </div>
         </div>
+        <p class="lead" style="margin-bottom:0;">
+          Bowling · Arcade · Cake · Friends — celebrate Erin’s #10 day with us!
+        </p>
+      </div>
+    </section>
 
+    <section>
+      <div class="wrap">
         <div class="details-strip" id="when-where">
           <div>
             <h3>When</h3>
@@ -89,7 +108,7 @@
           <div class="activity">
             <div class="activity-emoji" aria-hidden="true">⚽</div>
             <h3>Team Erin</h3>
-            <p>Friends and family celebrating Argentina-style jersey #10.</p>
+            <p>Friends and family celebrating jersey #10 vibes.</p>
           </div>
         </div>
       </div>
@@ -129,7 +148,7 @@
               height="600"
               loading="lazy"
             />
-            <figcaption class="hero-card-caption">Sky-blue &amp; white party vibes</figcaption>
+            <figcaption class="hero-card-caption">Sky-blue party vibes</figcaption>
           </figure>
         </div>
       </div>
@@ -243,7 +262,6 @@
             headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify(payload)
           });
-          // no-cors cannot read the response; a completed fetch is treated as success
           setStatus("success", "Thanks! Your RSVP was submitted to the family sheet.");
           form.reset();
           if (submitBtn) {
