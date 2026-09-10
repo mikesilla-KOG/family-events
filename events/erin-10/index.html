@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../css/styles.css?v=invite2" />
+  <link rel="stylesheet" href="../../css/styles.css?v=invite3" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
 </head>
 <body>
@@ -43,37 +43,74 @@
         </div>
         <div class="jersey" aria-label="Jersey number 10">
           <svg class="jersey-shape" viewBox="0 0 100 110" aria-hidden="true" focusable="false">
-            <!-- Soccer jersey body + sleeves -->
-            <path fill="#00456E" d="M30 20
-              C28 20 20 21 14 24
-              L2 36
-              L14 46
-              L22 39
-              L22 98
-              Q22 104 29 104
-              L71 104
-              Q78 104 78 98
-              L78 39
-              L86 46
-              L98 36
-              L86 24
-              C80 21 72 20 70 20
-              C66 34 56 41 50 41
-              C44 41 34 34 30 20
+            <defs>
+              <!-- Tone-on-tone chevron / zigzag fabric (no brand marks) -->
+              <pattern id="jersey-chevron" patternUnits="userSpaceOnUse" width="14" height="9">
+                <rect width="14" height="9" fill="#00456E"/>
+                <path d="M-1 9 L7 1 L15 9" fill="none" stroke="#0B5A84" stroke-width="2.6" stroke-linejoin="miter"/>
+                <path d="M-1 4.5 L7 -3.5 L15 4.5" fill="none" stroke="#0B5A84" stroke-width="2.6" stroke-linejoin="miter"/>
+              </pattern>
+              <clipPath id="jersey-body-clip">
+                <path d="M31 21
+                  C29 21 21 22.5 15 26
+                  L3 38
+                  L15 48
+                  L23 41.5
+                  L23 99
+                  Q23 105.5 31 105.5
+                  L69 105.5
+                  Q77 105.5 77 99
+                  L77 41.5
+                  L85 48
+                  L97 38
+                  L85 26
+                  C79 22.5 71 21 69 21
+                  C65 34.5 56.5 41.5 50 41.5
+                  C43.5 41.5 35 34.5 31 21
+                  Z"/>
+              </clipPath>
+            </defs>
+            <!-- Short-sleeve soccer jersey body -->
+            <path fill="url(#jersey-chevron)" d="M31 21
+              C29 21 21 22.5 15 26
+              L3 38
+              L15 48
+              L23 41.5
+              L23 99
+              Q23 105.5 31 105.5
+              L69 105.5
+              Q77 105.5 77 99
+              L77 41.5
+              L85 48
+              L97 38
+              L85 26
+              C79 22.5 71 21 69 21
+              C65 34.5 56.5 41.5 50 41.5
+              C43.5 41.5 35 34.5 31 21
               Z"/>
-            <!-- Collar / neck opening -->
-            <path fill="#4AB4FF" d="M30 20
-              C34 32 42 39 50 39
-              C58 39 66 32 70 20
-              C66 16 56 14 50 14
-              C44 14 34 16 30 20
+            <!-- Soft hem shadow -->
+            <path fill="#003355" opacity="0.22" d="M23 97h54v2.5Q77 105.5 69 105.5H31Q23 105.5 23 99z" clip-path="url(#jersey-body-clip)"/>
+            <!-- White crew-neck collar trim (ribbed band) -->
+            <path fill="#ffffff" fill-rule="evenodd" d="M31 21
+              C35 32.5 42.5 39.5 50 39.5
+              C57.5 39.5 65 32.5 69 21
+              C65 16.5 56.5 14.5 50 14.5
+              C43.5 14.5 35 16.5 31 21
+              Z
+              M35.2 21.2
+              C38.2 29.5 43.8 35.2 50 35.2
+              C56.2 35.2 61.8 29.5 64.8 21.2
+              C61.5 18 55.5 16.8 50 16.8
+              C44.5 16.8 38.5 18 35.2 21.2
               Z"/>
-            <!-- Sleeve cuffs -->
-            <path fill="#AEE1FC" d="M2 36l12 10 3-4L8 34z"/>
-            <path fill="#AEE1FC" d="M98 36L86 46l-3-4 9-8z"/>
-            <!-- Soft side panels -->
-            <path fill="#4AB4FF" opacity="0.35" d="M22 48h8v48h-8z"/>
-            <path fill="#4AB4FF" opacity="0.35" d="M70 48h8v48h-8z"/>
+            <!-- Tiny generic soccer-ball mark (no brand logos) -->
+            <g transform="translate(26.5,46) scale(0.095)" opacity="0.92" fill="#ffffff">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#ffffff" stroke-width="10"/>
+              <path d="M50 18 L68 32 L62 54 L38 54 L32 32 Z"/>
+              <path d="M18 40 L32 32 L38 54 L22 62 Z" opacity="0.85"/>
+              <path d="M82 40 L68 32 L62 54 L78 62 Z" opacity="0.85"/>
+              <path d="M28 78 L38 54 L62 54 L72 78 L50 88 Z" opacity="0.75"/>
+            </g>
           </svg>
           <span class="jersey-num">10</span>
         </div>

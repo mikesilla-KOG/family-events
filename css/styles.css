@@ -262,8 +262,8 @@ a:hover { color: var(--mid); }
 .jersey {
   display: inline-grid;
   place-items: center;
-  width: 5.1rem;
-  height: 5.6rem;
+  width: 5.35rem;
+  height: 5.9rem;
   margin: 0.35rem auto 1rem;
   position: relative;
   color: var(--white);
@@ -281,14 +281,14 @@ a:hover { color: var(--mid); }
 .jersey-num {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 1.95rem;
+  font-size: 1.85rem;
   letter-spacing: -0.04em;
   line-height: 1;
   position: relative;
   z-index: 1;
-  margin-top: 0.85rem;
+  margin-top: 1.05rem;
   color: var(--white);
-  text-shadow: 0 1px 0 rgba(0, 51, 85, 0.35);
+  text-shadow: 0 1px 0 rgba(0, 51, 85, 0.4);
 }
 
 .invite-kicker {
