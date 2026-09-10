@@ -39,7 +39,7 @@ window.FAMILY_EVENTS = {
         { name: "Ava", done: false },
         { name: "Emma", done: false },
         { name: "Stella", done: false },
-        { name: "Carmen", done: false }
+        { name: "Family", done: false }
       ],
       todos: [
         { label: "Cake — chocolate", done: false },
