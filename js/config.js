@@ -3,6 +3,7 @@
    Parents: change values here; pages read them at load time.
    ============================================================ */
 window.FAMILY_EVENTS = {
+  theme: "soccer",
   // RSVPs POST to Google Apps Script → Family Events sheet (tab Erin-10)
   rsvpEndpoint: "https://script.google.com/macros/s/AKfycbwP43bO_yOqdt7JxNN6zkLs0iiaXP6_bTn5beueQbfEZ5baLNXMFcJD34cmMB3yelegzw/exec",
   rsvpSheetUrl: "https://docs.google.com/spreadsheets/d/1-eUsuKFtIUPUZ_qp61BkogVzp8l8ENzQph9FJlSrde4/",
