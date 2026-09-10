@@ -57,8 +57,8 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body {
-  /* Bright sky-blue ground — not gray-pink */
-  background: #74C2E8 !important;
+  /* White ground so translucent blue stripes read at half intensity */
+  background: #ffffff !important;
 }
 
 html {
@@ -71,12 +71,12 @@ body {
   color: var(--ink);
   line-height: 1.6;
   min-height: 100vh;
-  /* Subtle vertical Argentina stripes over sky blue */
+  /* Subtle vertical Argentina stripes — blue at ~50% opacity */
   background-image:
     repeating-linear-gradient(
       90deg,
-      #74C2E8 0,
-      #74C2E8 28px,
+      rgba(116, 194, 232, 0.5) 0,
+      rgba(116, 194, 232, 0.5) 28px,
       #ffffff 28px,
       #ffffff 56px
     ) !important;
@@ -164,12 +164,12 @@ a:hover { color: var(--black); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  /* Soft sky-blue / white vertical stripes */
+  /* Soft sky-blue / white vertical stripes — blue alpha halved */
   background:
     repeating-linear-gradient(
       90deg,
-      rgba(116, 194, 232, 0.85) 0,
-      rgba(116, 194, 232, 0.85) 36px,
+      rgba(116, 194, 232, 0.425) 0,
+      rgba(116, 194, 232, 0.425) 36px,
       rgba(255, 255, 255, 0.75) 36px,
       rgba(255, 255, 255, 0.75) 72px
     );
