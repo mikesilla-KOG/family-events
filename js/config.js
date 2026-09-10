@@ -30,6 +30,22 @@ window.FAMILY_EVENTS = {
       roomBooking: "Confirm private party room reservation under family name; arrive 15 min early for setup.",
       foodPackage: "Order the kids party food package (pizza + drinks). Confirm headcount by Sept 18.",
       whatToBring: "Cake + candles, goodie bags, gift table supplies, camera/phone charger, cash tip for staff."
+    },
+    // Planning checklist — parents-only (/plan/). Flip done:true when finished.
+    planningNotes: {
+      guestList: [
+        { name: "Presley", done: false },
+        { name: "McKenzie", done: false },
+        { name: "Ava", done: false },
+        { name: "Emma", done: false },
+        { name: "Stella", done: false },
+        { name: "Carmen", done: false }
+      ],
+      todos: [
+        { label: "Cake — chocolate", done: false },
+        { label: "Goodie bags", done: false },
+        { label: "Goodie bag fill: Snickers, fidgets, Starburst", done: false }
+      ]
     }
   }
 };
