@@ -701,6 +701,21 @@ section { padding: 2.5rem 0; }
   color: var(--white);
 }
 
+.maps-link {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-weight: 800;
+  font-size: 0.88em;
+}
+
+.details-strip a {
+  color: var(--sky);
+}
+
+.details-strip a:hover {
+  color: var(--white);
+}
+
 /* RSVP */
 .rsvp-panel {
   background: var(--white);

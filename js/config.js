@@ -20,6 +20,8 @@ window.FAMILY_EVENTS = {
     dateISO: "2026-09-27",
     venue: "Pins & Pockets",
     city: "Lake Elsinore, California",
+    venueAddress: "32250 Mission Trail, Lake Elsinore, CA 92530",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=32250+Mission+Trail,+Lake+Elsinore,+CA+92530",
     venueDetail: "Bowling · Arcade · Private party rooms",
     // Placeholder party-day times (edit freely — used on /plan/)
     schedule: [

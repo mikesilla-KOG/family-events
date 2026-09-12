@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=invite9" />
+  <link rel="stylesheet" href="../css/styles.css?v=invite10" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
 </head>
 <body>
@@ -115,10 +115,11 @@
         <p class="invite-kicker">Party Day</p>
         <span class="invite-script">Itinerary</span>
         <h1 class="invite-name">Erin</h1>
-        <p class="lead" style="margin-inline:auto; margin-bottom:0;">
+        <p class="lead" style="margin-inline:auto; margin-bottom:0.75rem;">
           Editable placeholder times live in <code>js/config.js</code> under
           <code>erin10.schedule</code>. Update once, and this page refreshes on load.
         </p>
+        <p class="lead" id="plan-venue" style="margin-inline:auto; margin-bottom:0;"></p>
       </div>
     </section>
 
@@ -189,10 +190,22 @@
     </div>
   </footer>
 
-  <script src="../js/config.js"></script>
+  <script src="../js/config.js?v=invite10"></script>
   <script>
     (function () {
       var event = (window.FAMILY_EVENTS && window.FAMILY_EVENTS.erin10) || {};
+      var venueEl = document.getElementById("plan-venue");
+      if (venueEl) {
+        var venueName = event.venue || "Pins & Pockets";
+        var address = event.venueAddress || "";
+        var maps = event.mapsUrl || "";
+        var html = "<strong>Where</strong><br />" + venueName;
+        if (address) html += "<br />" + address;
+        if (maps) {
+          html += '<br /><a class="maps-link" href="' + maps + '" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>';
+        }
+        venueEl.innerHTML = html;
+      }
       var list = document.getElementById("schedule-list");
       var schedule = event.schedule || [];
       if (list) {
