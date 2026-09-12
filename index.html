@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=invite7" />
+  <link rel="stylesheet" href="css/styles.css?v=invite8" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>" />
 </head>
 <body>
@@ -276,10 +276,10 @@
           </p>
           <ul class="contact-phones" id="contact-phones">
             <li>
-              <a class="contact-phone" href="tel:+17142969975">714-296-9975</a>
+              <a class="contact-phone" href="tel:+17142969975">Michael · 714-296-9975</a>
             </li>
             <li>
-              <a class="contact-phone" href="tel:+17147452870">714-745-2870</a>
+              <a class="contact-phone" href="tel:+17147452870">Carmen · 714-745-2870</a>
             </li>
           </ul>
           <p class="contact-hint">Tap a number to call on your phone.</p>
@@ -295,7 +295,7 @@
     </div>
   </footer>
 
-  <script src="js/config.js"></script>
+  <script src="js/config.js?v=invite8"></script>
   <script>
     (function () {
       var cfg = window.FAMILY_EVENTS || {};
@@ -306,7 +306,8 @@
         var tel = p.tel || ("tel:" + String(p.number || "").replace(/[^0-9+]/g, ""));
         if (tel.indexOf("tel:") !== 0) tel = "tel:" + tel;
         var num = p.number || tel.replace(/^tel:/, "");
-        return '<li><a class="contact-phone" href="' + tel + '">' + num + "</a></li>";
+        var label = p.label ? String(p.label) + " · " : "";
+        return '<li><a class="contact-phone" href="' + tel + '">' + label + num + "</a></li>";
       }).join("");
     })();
   </script>

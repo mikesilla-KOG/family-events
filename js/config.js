@@ -10,8 +10,8 @@ window.FAMILY_EVENTS = {
   rsvpEmail: "rsvp@example.com", // optional backup contact (email is no longer the primary RSVP path)
   // Phone contacts for questions (shown on invite #contact)
   contactPhones: [
-    { label: "Call / text", number: "714-296-9975", tel: "+17142969975" },
-    { label: "Call / text", number: "714-745-2870", tel: "+17147452870" }
+    { label: "Michael", number: "714-296-9975", tel: "+17142969975" },
+    { label: "Carmen", number: "714-745-2870", tel: "+17147452870" }
   ],
   erin10: {
     celebrant: "Erin",
