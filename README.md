@@ -51,14 +51,14 @@ Columns: Timestamp, Name, Guests, RSVP, Notes, Source. Parents open that sheet t
 
 | Step | Time | Label |
 |------|------|-------|
-| 1 | Now – Sept 18 | Invite friends |
-| 2 | 1:00 PM | Arrival / check-in |
-| 3 | 1:20 PM | Food |
-| 4 | 1:50 PM | Cake + birthday song |
-| 5 | 2:10 PM | Bowling |
-| 6 | 3:00 PM | Arcade |
-| 7 | 3:45 PM | Presents |
-| 8 | 4:15 PM | Goodie bags / send-off |
+| 1 | Now – Sept 20 | Invite friends |
+| 2 | 5:00 PM | Arrival / check-in |
+| 3 | 5:20 PM | Food |
+| 4 | 5:50 PM | Cake + birthday song |
+| 5 | 6:10 PM | Bowling |
+| 6 | 7:00 PM | Arcade |
+| 7 | 7:45 PM | Presents |
+| 8 | 8:15 PM | Goodie bags / send-off |
 
 ## GitHub Pages setup
 
