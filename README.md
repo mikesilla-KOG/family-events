@@ -4,12 +4,15 @@ Static GitHub Pages site for family celebrations. Current featured event: **Erin
 
 **Live site:** https://mikesilla-kog.github.io/family-events/
 
+Short RSVP link: https://mikesilla-kog.github.io/family-events/rsvp/
+
 ## Pages
 
 | Path | Purpose |
 |------|---------|
 | `/` | Home — Erin’s birthday invite hub |
 | `/events/erin-10/` | Public birthday invite + RSVP |
+| `/rsvp/` | Short RSVP link → invite page |
 | `/plan/` | **Parents-only itinerary** (not in main nav) |
 
 ### Hidden itinerary URL
