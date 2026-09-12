@@ -8,6 +8,11 @@ window.FAMILY_EVENTS = {
   rsvpEndpoint: "https://script.google.com/macros/s/AKfycbwP43bO_yOqdt7JxNN6zkLs0iiaXP6_bTn5beueQbfEZ5baLNXMFcJD34cmMB3yelegzw/exec",
   rsvpSheetUrl: "https://docs.google.com/spreadsheets/d/1-eUsuKFtIUPUZ_qp61BkogVzp8l8ENzQph9FJlSrde4/",
   rsvpEmail: "rsvp@example.com", // optional backup contact (email is no longer the primary RSVP path)
+  // Phone contacts for questions (shown on invite #contact)
+  contactPhones: [
+    { label: "Call / text", number: "714-296-9975", tel: "+17142969975" },
+    { label: "Call / text", number: "714-745-2870", tel: "+17147452870" }
+  ],
   erin10: {
     celebrant: "Erin",
     age: 10,

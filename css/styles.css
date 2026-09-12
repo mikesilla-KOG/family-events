@@ -889,6 +889,72 @@ section { padding: 2.5rem 0; }
   letter-spacing: 0.03em;
 }
 
+
+/* Contact */
+.contact-panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2.25rem;
+  box-shadow: var(--shadow);
+  border: 2px dashed var(--mid);
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+  position: relative;
+}
+
+.contact-panel::before {
+  content: "📞";
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  padding: 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.contact-phones {
+  list-style: none;
+  padding: 0;
+  margin: 1.35rem 0 0.75rem;
+  display: grid;
+  gap: 0.85rem;
+  justify-items: center;
+}
+
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: min(100%, 280px);
+  padding: 0.85rem 1.25rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  text-decoration: none;
+  background: var(--soft);
+  border: 2px solid var(--mid);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.contact-phone:hover,
+.contact-phone:focus-visible {
+  color: var(--white);
+  background: var(--navy);
+  border-color: var(--navy);
+  outline: none;
+}
+
+.contact-hint {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
 /* Footer */
 .site-footer {
   margin-top: 2rem;
